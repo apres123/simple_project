@@ -1,8 +1,5 @@
-import java.util.Scanner;
-
 public class SimpleObject {
 	private String message;	//contains SimpleObject's message
-	private Scanner scan;
 
 	/**
 	 * <p>This constructor creates the SimpleObject object with
@@ -10,7 +7,6 @@ public class SimpleObject {
 	 */
 	public SimpleObject() {
 		message = "This is the default message";
-		scan = new Scanner(System.in);
 	}
 	
 	/**
@@ -19,20 +15,18 @@ public class SimpleObject {
 	 *
 	 * @param _message Sets the SimpleObject's message
 	 */
-	public SimpleObject(String _message) {
-		message = _message;
-		scan = new Scanner(System.in);
+	public SimpleObject(String msg) {
+		message = msg;
 	}
 
 	/**
 	 * <p> This method allows the user to set their own custom message
 	 * for the SimpleObject </p>
+	 *
+	 * @param msg The message the user would like to set
 	 */
-
-	public void setMessage() {
-		System.out.print("Type custom message here: ");
-		message = scan.next();
-		System.out.println("\nYour new message is: " + message);
+	public void setMessage(String msg) {
+		message = msg;
 	}
 	@Override
 	public String toString() {

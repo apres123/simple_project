@@ -1,32 +1,15 @@
-import java.util.Scanner;
-
 public class SimpleProgram {
 	public static void main (String[] args) {
 		SimpleObject obj;
-		Scanner scan;
 		String choice;
 		String msg;
 
-		scan = new Scanner(System.in);
+		obj = new SimpleObject();
+
 		choice = "e";	//default value
-		msg = "";
+		msg = "Wow! This message is so custom";
 
-		System.out.print("Would you like to make a custom message? (y/n) ");
-		
-		while (!choice.equals("y") && !choice.equals("n")) {
-			choice = scan.next();
-		}
-
-		if (choice.equals("y")) {
-			System.out.println("Wow!\nWow!\nWow!");
-			System.out.println("Enter message: ");
-			scan.nextLine();
-			msg = scan.nextLine();
-			obj = new SimpleObject(msg);
-		}
-		
-		else
-			obj = new SimpleObject();
+		obj.setMessage(msg);
 
 		System.out.println(obj);
 	}
