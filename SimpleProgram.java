@@ -4,12 +4,12 @@ public class SimpleProgram {
 		String choice;
 		String msg;
 
-		obj = new SimpleObject();
-
-		choice = "e";	//default value
-		msg = "Wow! This message is so custom";
-
-		obj.setMessage(msg);
+		if (!(args[0].equals(""))) {
+			obj = new obj(args[0]);
+		}
+		
+		else
+			obj = new obj();
 
 		System.out.println(obj);
 	}
