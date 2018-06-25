@@ -5,11 +5,11 @@ public class SimpleProgram {
 		String msg;
 
 		if (!(args[0].equals(""))) {
-			obj = new obj(args[0]);
+			obj = new SimpleObject(args[0]);
 		}
 		
 		else
-			obj = new obj();
+			obj = new SimpleObject();
 
 		System.out.println(obj);
 	}
