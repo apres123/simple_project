@@ -28,6 +28,7 @@ public class SimpleObject {
 	public void setMessage(String msg) {
 		message = msg;
 	}
+	
 	@Override
 	public String toString() {
 		String printed;

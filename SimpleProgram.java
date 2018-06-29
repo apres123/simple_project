@@ -3,8 +3,17 @@ public class SimpleProgram {
 		SimpleObject obj;
 		String choice;
 		String msg;
+		boolean clarg = true;	//true if arg passed in CL line, false if not
 
-		if (!(args[0].equals(""))) {
+		try {
+			String test = args[0];
+		}
+
+		catch (ArrayIndexOutOfBoundsException e) {
+			clarg = false;
+		}
+
+		if (clarg) {
 			obj = new SimpleObject(args[0]);
 		}
 		
